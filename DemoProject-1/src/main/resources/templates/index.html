@@ -1,0 +1,49 @@
+<html>
+<head></head>
+
+<body>
+<h1>EMP-LIST</h1>
+<br>
+
+<a th:href = "@{/addEmp}">ADD EMP</a>
+<br>
+<br>
+<table>
+<thead>
+    <tr>
+        <th>
+            FNAME
+        </th>
+        <th>
+            LNAME
+        </th>
+        <th>
+            EMAIL
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr th:each="employee : ${list}">
+        <td th:text="${employee.fname}">
+
+        </td>
+        <td th:text="${employee.lname}">
+
+        </td>
+        <td th:text="${employee.email}">
+
+        </td>
+        <td>
+            <a th:href = "@{/updEmp/{id}/(id=${employee.id})}">UPD EMP</a>
+            <a th:href = "@{/delEmp/{id}/(id=${employee.id})}">DEL EMP</a>
+        </td>
+    </tr>
+</tbody>
+
+</table>
+
+</body>
+</html>

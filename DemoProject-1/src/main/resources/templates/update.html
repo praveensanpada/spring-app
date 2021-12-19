@@ -1,0 +1,18 @@
+<html>
+<head></head>
+
+<body align="center">
+<h1>EMP-UPDATE</h1>
+
+<form method="POST" th:action="@{/updNewEmp}" th:object="${employee}">
+
+    <input type="hidden" th:field="*{id}" name="id"><br><br>
+    FNAME :- <input type="text" th:field="*{fname}" name="fname"><br><br>
+    LNAME :- <input type="text" th:field="*{lname}" name="lname"><br><br>
+    EMAIL :- <input type="text" th:field="*{email}" name="email"><br><br>
+    <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<head></head>
+
+<body align="center">
+<h1>EMP-REGISTER</h1>
+
+<form method="POST" th:action="@{/saveNewEmp}" th:object="${employee}">
+    FNAME :- <input type="text" th:field="*{fname}" name="fname"><br><br>
+    LNAME :- <input type="text" th:field="*{lname}" name="lname"><br><br>
+    EMAIL :- <input type="text" th:field="*{email}" name="email"><br><br>
+    <input type="submit" value="Register">
+</form>
+
+
+</body>
+</html>
